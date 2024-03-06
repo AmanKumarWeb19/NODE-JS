@@ -13,3 +13,26 @@ fs.writeFile("./text.txt", "I am Aman Kumar and I am doing NodeJs\n", (err) => {
     console.log("Data is entered");
   }
 });
+
+fs.rename("./text.txt", "./newText.txt", (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("rename the file name");
+  }
+});
+
+fs.appendFile("./newText.txt", "I am the king kohli fan\n", (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("append the file");
+  }
+});
+fs.unlink("./text.txt", (err) => {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("delete teh file");
+  }
+});
