@@ -34,8 +34,6 @@ app.get("/teacher", (req, res) => {
 });
 
 app.post("/addstudent", (req, res) => {
-  // const payload = req.body;
-
   // Step 1 :-Get the Complete data withe the help of fs.readFileSync.
   const data = fs.readFileSync("./data.json", "utf-8");
 

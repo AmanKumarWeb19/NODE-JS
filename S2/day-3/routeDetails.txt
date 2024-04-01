@@ -1,0 +1,2 @@
+Route Visited: / | Method: GET | ResponseTime: 9
+Route Visited: /data | Method: GET | ResponseTime: 2
