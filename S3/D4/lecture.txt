@@ -1,0 +1,99 @@
+RelationShips: The link or bond between two things.
+
+Thing : people, objects, network, computers
+
+    ==> Database
+      ==> collections ==> multiple collections ==>emp, hr, marketing, sales, curriculum
+        ==> Documents
+
+        
+** In our case we are going to study about link/bond between different Collections in DB.
+
+==> Types of Relationships:-
+
+1. one to one RelationShip.
+2. one to many RelationShip
+3. many to many RelationShip
+
+==> why do we need RelationShip?
+
+Masai School Example:- (Masai is a database Collections)
+a. Students Collections
+b. Instructures Collections
+
+
+1. one to one RelationShip.
+
+* Students Collections ==> Documents:-
+_id:"-----"
+batch
+student code
+
+* Instructures Collections ==> Documents:-
+_id:"-----"
+exp
+employee code
+department
+
+to find the people who is from BLR
+
+db.students.find({city:"BLR"})
+db.instructures .find({city:"BLR"})
+
+but if i need to check from all the collections that who live in BLR
+then i will create a common collections like
+
+user's collection:-
+_id:"-----"
+name
+email
+age
+phone
+city
+language
+address
+
+1. one to one RelationShip.
+
+1st way :- Put the user's Id in Student's Schema
+2nd way :- Put the Student's Id in User's Schema
+
+....................................................................................................
+
+2. one to many RelationShip:--
+
+LinkedIn:
+  ==> Posts
+  ==> Comments
+
+    Posts=[
+     {
+       id:1
+      title:"first post"
+      no_likes:45
+      no_comments:[1,25,4,8]
+     },
+      {
+       id:2
+      title:"first post"
+      no_likes:45
+      no_comments:[1,25,4,8]
+     },
+      {
+       id:3
+      title:"first post"
+      no_likes:45
+      no_comments:[1,25,4,8]
+     },
+      {
+       id:4
+      title:"first post"
+      no_likes:45
+      no_comments:[1,25,4,8]
+     }
+    ]
+
+    Because One Comment have multiple reply:
+
+    1st way:- put the post id in comments Schema
+    1st way:- put the comments id in Post Schema
